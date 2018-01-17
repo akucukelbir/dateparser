@@ -42,7 +42,7 @@ class Settings(object):
     @classmethod
     def _get_settings_from_yaml(cls):
         if not cls._yaml_data:
-            data = get_data('data', 'settings.yaml')
+            data = get_data('dateparserdata', 'settings.yaml')
             cls._yaml_data = SafeLoader(data).get_data().pop('settings', {})
         return cls._yaml_data
 
